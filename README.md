@@ -1,1 +1,30 @@
-# Veebileht-hele-tume
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap veebileht</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-light"> <!-- Pimedas režiimis vaikimisi -->
+  <div class="container mt-5">
+    <h1>JavaScript. Veebilehe tume ja hele värviskeemi vahel ümberlülitamine.</h1>
+    <p>koolis haiseb.</p>
+    <button id="theme-toggle" class="btn btn-light">Must valge</button>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', function () {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('bg-light');
+      document.body.classList.toggle('text-light');
+      document.body.classList.toggle('text-dark');
+      themeToggle.classList.toggle('btn-light');
+      themeToggle.classList.toggle('btn-dark');
+    });
+  </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
